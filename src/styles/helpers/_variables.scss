@@ -1,0 +1,37 @@
+//Media
+$hd: 1504px;
+$xl: 1280px;
+$l: 992px;
+$md: 768px;
+$s: 320px;
+
+//Colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+$color-primary: #4488bb;
+$color-error: #BB4444;
+
+$color-mineShaft: #333333;
+$color-silverChalice: #aaaaaa;
+$color-gallery: #EEEEEE;
+$color-codGray: #161616;
+
+//Fonts
+$font-primary: "Arial-Regular";
+$font-secondary: "Arial-Bold";
+
+//Grid
+$grid-unit: 8px;
+$col-hd-extra: $grid-unit*13;
+$col-hd: $grid-unit*11;
+$col-xl: $grid-unit*9;
+$col-l: $grid-unit*6;
+$col-md: $grid-unit*10;
+$col-s: $grid-unit*6;
+
+//Animation
+$transition: .2s ease-in-out;
+
+
+

@@ -1,0 +1,17 @@
+$path: '/fonts/';
+
+@font-face {
+  font-family: "Arial-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url($path + 'ArialRegular.woff2') format("woff2"),
+       url($path + 'ArialRegular.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Arial-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url($path + 'ArialBbold.woff2') format("woff2"),
+       url($path + 'ArialBold.woff') format("woff");
+}

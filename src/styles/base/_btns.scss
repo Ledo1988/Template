@@ -1,0 +1,43 @@
+.button {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: $grid-unit*3;
+    padding: 11px 24px;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    border-radius: 50px;
+    transition: $transition;
+    cursor: pointer;
+
+    &[disabled] {
+        cursor: default;
+        opacity: 0.5;
+    }
+
+    &-block {
+        display: block;
+        width: 100%;
+    }
+
+    &-mail {
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:before {
+            content:'';
+            display: inline-block;
+            vertical-align: middle;
+            width: 16px;
+            height: 16px;
+            background-image: url('/img/sprites/sprite.svg#ico_mail');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 12px;
+        }
+    }
+}
