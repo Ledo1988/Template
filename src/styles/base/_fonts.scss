@@ -12,6 +12,6 @@ $path: '/fonts/';
   font-family: "Arial-Bold";
   font-style: normal;
   font-weight: 700;
-  src: url($path + 'ArialBbold.woff2') format("woff2"),
+  src: url($path + 'ArialBold.woff2') format("woff2"),
        url($path + 'ArialBold.woff') format("woff");
 }

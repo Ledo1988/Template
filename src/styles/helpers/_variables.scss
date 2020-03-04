@@ -9,7 +9,8 @@ $s: 320px;
 $color-black: #000000;
 $color-white: #ffffff;
 
-$color-primary: #4488bb;
+$color-primary: #ffffff;
+$color-secondary: #4488bb;
 $color-error: #BB4444;
 
 $color-mineShaft: #333333;
@@ -22,7 +23,7 @@ $font-primary: "Arial-Regular";
 $font-secondary: "Arial-Bold";
 
 //Grid
-$grid-unit: 8px;
+$grid-unit: 5px;
 $col-hd-extra: $grid-unit*13;
 $col-hd: $grid-unit*11;
 $col-xl: $grid-unit*9;

@@ -1,15 +1,20 @@
 h1, .h1 {
     font-family: $font-secondary;
-    font-size: 56px;
-    font-weight: bold;
-    line-height: $grid-unit*7;
-    letter-spacing: 0.01em;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: $grid-unit*8;
     margin-top: 0;
-    margin-bottom: $grid-unit*4;
 
-    @media (max-width: 375px) {
+    @media (min-width: $md) {
         font-size: 36px;
-        line-height: 36px;
+    }
+
+    @media (min-width: $l) {
+        font-size: 40px;
+    }
+
+    @media (min-width: $xl) {
+        font-size: 48px;
     }
 }
 
@@ -128,7 +133,7 @@ ol:not([class]) {
                 display: block;
                 left: 0;
                 top: 0;
-                font-family: $font-tertiary;
+                font-family: $font-secondary;
                 font-weight: 700;
                 letter-spacing: -0.32px;
             }
