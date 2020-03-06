@@ -1,0 +1,14 @@
+- var postTitle;
+- var postDesc;
+- var postImg;
+
+a(href="#" class="posts__post-item post-item")
+	.post-item__img
+		img(src=postImg width="390" height="150" alt=postTitle)
+	.post-item__info
+		.post-item__title
+			span.post-item__title-item=postTitle
+			span.post-item__link
+				svg(class="icon")
+					use(xlink:href="/img/sprites/sprite.svg#ico_link")
+		.post-item__desc=postDesc

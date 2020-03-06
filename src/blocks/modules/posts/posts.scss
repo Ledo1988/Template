@@ -1,0 +1,9 @@
+.posts {
+  @include container-fluid;
+  margin-bottom: $grid-unit*3;
+
+  &--wrapper {
+    display: block;
+    @include container;
+  }
+}

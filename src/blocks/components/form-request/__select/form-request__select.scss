@@ -24,7 +24,7 @@
     padding: 15px 14px 15px 8px;
     border: 1px solid transparent;
     border-radius: 3px;
-    background-color: $color-gallery;
+    background-color: $color-primary;
     transition: $transition;
 
     &:after {
@@ -62,7 +62,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: $color-gallery;
+    background-color: $color-primary;
   }
 
   &__options-item {
@@ -74,7 +74,7 @@
 
     &:hover {
       color: $color-silverChalice;
-      background:$color-gallery;
+      background:$color-primary;
     }
 
     &[rel="hide"] {
