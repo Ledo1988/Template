@@ -1,13 +1,15 @@
 .button {
     position: relative;
     display: inline-block;
+    padding: $grid-unit*2 $grid-unit*3;
+    border: 0;
+    border-radius: 3px;
     font-size: 16px;
-    line-height: $grid-unit*3;
-    padding: 11px 24px;
+    line-height: 1;
+    color: $color-gallery;
     text-align: center;
     text-decoration: none;
-    border: 0;
-    border-radius: 50px;
+    background-color: $color-silverChalice;
     transition: $transition;
     cursor: pointer;
 
@@ -16,28 +18,27 @@
         opacity: 0.5;
     }
 
-    &-block {
+    &--blue {
+        background-color: $color-secondary;
+
+        &:hover {
+            background-color: rgba(68, 136, 187, 0.8);
+        }
+    }
+
+    &--transparent {
+        color: $color-silverChalice;
+        background-color: transparent;
+
+        &:hover {
+            color: $color-mineShaft;
+        }
+    }
+
+    &--block {
         display: block;
         width: 100%;
     }
 
-    &-mail {
-        span {
-            display: inline-block;
-            vertical-align: middle;
-        }
 
-        &:before {
-            content:'';
-            display: inline-block;
-            vertical-align: middle;
-            width: 16px;
-            height: 16px;
-            background-image: url('/img/sprites/sprite.svg#ico_mail');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            margin-right: 12px;
-        }
-    }
 }

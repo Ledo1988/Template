@@ -165,7 +165,7 @@ textarea {
         }
 
         .input-animated__label {
-            top: 4px;
+            top: 6px;
             font-size: 10px;
         }
 
@@ -262,5 +262,80 @@ textarea {
             left: calc((100% - 20px)/2);
             @include triangle(top, 10px, 10px, $color-error);
         }
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        @media (min-width: $md) {
+            &:hover {
+                ~ label::before {
+                    background-color: rgba(68, 136, 187, 0.5);
+                }
+            }
+        }
+
+        &:checked {
+            ~ label::before {
+                background-color: $color-secondary;
+            }
+
+            ~ label::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 16px;
+        color: $color-silverChalice;
+
+        &:before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            background: $color-gallery;
+            box-sizing: border-box;
+            border-radius: 3px;
+            margin-right: 8px;
+            transition: $transition;
+            flex-shrink: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid $color-white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            transition: $transition;
+            opacity: 0;
+        }
+
+
+    }
+
+    &__title {
+
     }
 }

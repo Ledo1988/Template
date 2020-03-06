@@ -1,0 +1,84 @@
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: $grid-unit*3;
+  cursor: pointer;
+  font-size: 16px;
+  color: $color-silverChalice;
+
+
+  &-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px 14px 15px 8px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: $color-gallery;
+    transition: $transition;
+
+    &:after {
+      position: absolute;
+      top: 20px;
+      right: 14px;
+      @include triangle(bottom, 8px, 8px, $color-silverChalice);
+      transition: $transition;
+    }
+
+    &:hover {
+      border-color: $color-secondary;
+    }
+
+    &:active, &.active {
+      border-color: $color-secondary;
+      border-radius: 3px 3px 0px 0px;
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__options {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 0;
+    left: 0;
+    border: 1px solid $color-secondary;
+    border-top: none;
+    border-radius: 0 0px 3px 3px;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $color-gallery;
+  }
+
+  &__options-item {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid darken($color-silverChalice, 10);
+    transition: $transition;
+
+    &:hover {
+      color: $color-silverChalice;
+      background:$color-gallery;
+    }
+
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
