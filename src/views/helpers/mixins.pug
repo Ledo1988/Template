@@ -1,0 +1,14 @@
+mixin input(idName, value, type, name, required, placeholder)
+	.label-content
+		label(for=idName)
+			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
+
+mixin input-animated(idName, value, type, name, required, labelContent)
+	.input-animated
+		input(id=idName class='input-animated__item' value=value type=type name=name required=required)
+		label(for=idName class='input-animated__label')=labelContent
+		a.input-animated__empty(href="javascript:void(0);")
+			svg(class="icon")
+				use(xlink:href="/img/sprites/sprite.svg#ico_close")
+		span.input-animated__error
+			block
