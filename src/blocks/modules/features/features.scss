@@ -1,0 +1,82 @@
+.features {
+  position: relative;
+  overflow: hidden;
+  @include container-fluid;
+  margin-top: -19*$grid-unit;
+  margin-bottom: $grid-unit*4;
+  padding-top: $grid-unit*22;
+  background-color: $color-primary;
+
+  &__item {
+
+    &-img {
+      display: none;
+    }
+
+    &-content{
+      color: $font-secondary;
+    }
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &__list {
+    counter-reset: my-counter;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    counter-increment: my-counter;
+    position: relative;
+
+    &:last-of-type {
+      .features__list-link-text {
+        border-bottom: none;
+      }
+    }
+  }
+
+   &__list-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-secondary;
+
+    &:before {
+      content: counter(my-counter);
+      border-radius: 50%;
+      margin-right: $grid-unit*4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      font-family: $font-secondary;
+      font-weight: 700;
+      font-size: 18px;
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
+  }
+
+  &__list-link-text {
+    flex-grow: 1;
+    padding: $grid-unit*3 0;
+    border-bottom: 1px dashed $color-silverChalice;
+  }
+
+  &--wrapper {
+    display: block;
+    @include container;
+  }
+}
