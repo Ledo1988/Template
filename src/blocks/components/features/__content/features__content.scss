@@ -1,0 +1,85 @@
+.features__content {
+  position: relative;
+  overflow: hidden;
+  @include container-fluid;
+  margin-top: -19*$grid-unit;
+  margin-bottom: $grid-unit*4;
+  padding-top: $grid-unit*22;
+  background-color: $color-primary;
+
+  &-item {
+
+    &-img {
+      display: none;
+    }
+
+    &-desc {
+      color: $font-secondary;
+    }
+  }
+
+  &-title {
+    display: none;
+  }
+
+  &-list {
+    counter-reset: content-counter;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-list-item {
+    counter-increment: content-counter;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-secondary;
+
+    &:before {
+      content: counter(content-counter);
+      border-radius: 50%;
+      margin-right: $grid-unit*4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      font-family: $font-secondary;
+      font-weight: 700;
+      font-size: 18px;
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
+
+    &:last-of-type {
+      .features__content-list-item-desc {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-list-item-desc {
+    flex-grow: 1;
+    padding: $grid-unit*3 0;
+    border-bottom: 1px dashed $color-silverChalice;
+
+    p, span{
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &--wrapper {
+    display: block;
+    @include container;
+  }
+}
