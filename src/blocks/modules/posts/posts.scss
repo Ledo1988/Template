@@ -2,8 +2,18 @@
   @include container-fluid;
   margin-bottom: $grid-unit*3;
 
+  @media (min-width: $l) {
+    margin-bottom: 75px;
+  }
+
   &--wrapper {
     display: block;
     @include container;
+
+    @media (min-width: $l) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 }

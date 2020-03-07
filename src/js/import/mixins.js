@@ -21,7 +21,6 @@ $(document).ready(function() {
 
 		if (!$(this).children('.input-animated__item').val()) {
 			$(this).removeClass('not-empty');
-			$(this).children('.input-animated__item').blur();
 		}
 
 	});

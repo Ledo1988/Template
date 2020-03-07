@@ -9,46 +9,10 @@
     padding: 0 $grid-unit*2;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1986px;
+    max-width: 100%;
 
-    @media (max-width: 1919px) and (min-width: $hd) {
-        max-width: 1440px;
-    }
-
-    @media (max-width: $hd - 1px) and (min-width: $xl) {
-       max-width: 1248px;
-    }
-
-    @media (max-width: $xl - 1px) and (min-width: $l) {
-        max-width: 960px;
-    }
-
-    @media (max-width: $l - 1px) and (min-width: $md) {
-        max-width: 672px;
-    }
-
-    @media (max-width: $md - 1px) and (min-width: $s) {
-        max-width: 320px;
-    }
-}
-
-@mixin container-md {
-    width: 100%;
-    padding: 0 $grid-unit*2;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1248px;
-
-    @media (max-width: $hd - 1px) and (min-width: $xl) {
-        max-width: 960px;
-    }
-
-    @media (max-width: $xl - 1px) and (min-width: $l) {
-        max-width: 672px;
-    }
-
-    @media (max-width: $l - 1px) and (min-width: $s) {
-        max-width: 320px;
+    @media (min-width: $xl) {
+        max-width: 1210px;
     }
 }
 

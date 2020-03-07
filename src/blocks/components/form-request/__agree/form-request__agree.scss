@@ -1,3 +1,7 @@
 .agree {
   margin-bottom: 18px;
+
+  @media (min-width: $l) {
+    margin-bottom: 16px;
+  }
 }
