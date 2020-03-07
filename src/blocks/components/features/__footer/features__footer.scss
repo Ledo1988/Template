@@ -11,6 +11,10 @@
     position: relative;
     padding: $grid-unit*3 $grid-unit*4 $grid-unit*4;
 
+    @media (min-width: $l) {
+      padding: $grid-unit*3 $grid-unit*5 $grid-unit*4;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -39,6 +43,10 @@
       font-size: 18px;
       line-height: 24px;
       color: $color-secondary;
+
+      @media (min-width: $l) {
+        margin-bottom: 8px;
+      }
 
       &:last-of-type {
         margin-bottom: 0;

@@ -7,19 +7,49 @@
   padding-top: $grid-unit*22;
   background-color: $color-primary;
 
+  @media (min-width: $l) {
+    overflow: visible;
+    margin-top: 0;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
   &-item {
 
     &-img {
       display: none;
+
+      @media (min-width: $l) {
+        flex-shrink: 0;
+        display: block;
+        margin-top: -98px;
+        margin-left: 10px;
+      }
     }
 
     &-desc {
-      color: $font-secondary;
+      color: $color-secondary;
+
+      @media (min-width: $l) {
+        width: 590px;
+      }
     }
   }
 
   &-title {
     display: none;
+    color: $color-secondary;
+    padding-left: 50px;
+    margin-bottom: 40px;
+
+    &.h1 {
+      margin-bottom: 40px;
+    }
+
+
+    @media (min-width: $l) {
+      display: block;
+    }
   }
 
   &-list {
@@ -72,6 +102,10 @@
     padding: $grid-unit*3 0;
     border-bottom: 1px dashed $color-silverChalice;
 
+    @media (min-width: $l) {
+      padding: 12px 0;
+    }
+
     p, span{
       font-size: 18px;
       line-height: 24px;
@@ -81,5 +115,10 @@
   &--wrapper {
     display: block;
     @include container;
+
+    @media (min-width: $l) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
