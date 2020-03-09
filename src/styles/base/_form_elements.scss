@@ -80,6 +80,10 @@ input {
     &:active, &:focus, &:hover {
         outline: none;
     }
+
+    &::-ms-clear {
+        display: none;
+    }
 }
 
 .input--wrapper {
@@ -224,11 +228,12 @@ textarea {
 
     &__empty {
         position: absolute;
-        top: 20px;
-        right: 14px;
+        top: 15px;
+        right: 10px;
         display: block;
-        width: $grid-unit*2;
-        height: $grid-unit*2;
+        width: $grid-unit*4;
+        height: $grid-unit*4;
+        padding: $grid-unit;
         opacity: 0;
         transition: $transition;
         pointer-events: none;

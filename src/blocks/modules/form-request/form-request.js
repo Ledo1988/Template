@@ -1,18 +1,21 @@
-let formRequest = document.getElementById("form-request");
-let userEmail = document.getElementById("form-email");
-let userName = document.getElementById("form-name");
-let userSelect = document.getElementById("form-select");
-let userAgree = document.getElementById("form-agree");
+var formRequest = document.getElementById("form-request");
+var userEmail = document.getElementById("form-email");
+var userName = document.getElementById("form-name");
+var userSelect = document.getElementById("form-select");
+var userAgree = document.getElementById("form-agree");
 
-formRequest.addEventListener("submit", function(event) {
-	let isValid = validate();
+window.onload=function() {
+	
+	formRequest.addEventListener("submit", function(event) {
+		var isValid = validate();
 
-	if (isValid == false) {
-		event.preventDefault();
-	} else {
-		return true;
-	}
-});
+		if (isValid == false) {
+			event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+		} else {
+			return true;
+		}
+	});
+}
 
 function validate() {
 
@@ -43,12 +46,12 @@ function validate() {
 }
 
 function isValidEmail (emailAddress) {
-	let patternEmail = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+	var patternEmail = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 	return patternEmail.test(emailAddress);
 }
 
 function isValidName (name) {
-	let patternName = new RegExp(/^([- A-Za-zа-яА-ЯёЁ]+)$/);
+	var patternName = new RegExp(/^([- A-Za-zа-яА-ЯёЁ]+)$/);
 	return patternName.test(name);
 }
 
