@@ -1,13 +1,13 @@
 .form-request
 	.form-request--wrapper
-		form.form-request__form(action="" method="")
+		form.form-request__form(action="" method="" id="form-request")
 			.form-request__title Request form
-			+input-animated("form-email", "form-request__input", "", "text", "email", "", "Enter your E-Mail")
+			+input-animated("form-email", "form-request__input", "", "text", "email", "Enter your E-Mail")
 				| Enter correct E-Mail
-			+input-animated("form-name", "form-request__input", "", "text", "name", "", "Enter your name")
+			+input-animated("form-name", "form-request__input", "", "text", "name", "Enter your name")
 				| Enter correct name
 			include ../../components/form-request/__select/form-request__select
 			include ../../components/form-request/__agree/form-request__agree
 			.form-request__btns
-				button(class="form-request__btn button button--blue" type="submit") Submit
+				button(class="form-request__btn form-request__btn-submit button button--blue" type="submit") Submit
 				a(href="javascript: void(0);" class="form-request__btn button button--transparent") Hyperlink

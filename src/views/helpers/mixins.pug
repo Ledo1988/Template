@@ -3,9 +3,9 @@ mixin input(idName, value, type, name, required, placeholder)
 		label(for=idName)
 			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
 
-mixin input-animated(idName, className, value, type, name, required, labelContent)
+mixin input-animated(idName, className, value, type, name, labelContent)
 	.input-animated(class=className)
-		input(id=idName class='input-animated__item' value=value type=type name=name required=required)
+		input(id=idName class='input-animated__item' value=value type=type name=name)
 		label(for=idName class='input-animated__label')=labelContent
 		a.input-animated__empty(href="javascript:void(0);")
 			svg(class="icon")

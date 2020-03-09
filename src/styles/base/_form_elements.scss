@@ -71,6 +71,7 @@ input {
     color: $color-secondary;
     background: $color-primary;
     transition: $transition;
+    cursor: auto;
 
     &::placeholder {
         color: $color-silverChalice;
@@ -95,6 +96,7 @@ input {
         font-weight: 700;
         font-size: 14px;
         line-height: $grid-unit*3;
+        cursor: auto;
 
         &.input__label--required {
 
