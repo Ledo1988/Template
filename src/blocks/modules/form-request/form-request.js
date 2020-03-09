@@ -2,12 +2,19 @@ let formRequest = document.getElementById("form-request");
 let userEmail = document.getElementById("form-email");
 let userName = document.getElementById("form-name");
 let userSelect = document.getElementById("form-select");
+let userAgree = document.getElementById("form-agree");
 
-formRequest.addEventListener("submit", validate);
+formRequest.addEventListener("submit", function(event) {
+	let isValid = validate();
 
-function validate(event) {
+	if (isValid == false) {
+		event.preventDefault();
+	} else {
+		return true;
+	}
+});
 
-	event.preventDefault();
+function validate() {
 
 	if (!userEmail.value || !isValidEmail(userEmail.value)) {
 		userEmail.closest(".form-request__input").classList.add("error");
@@ -19,11 +26,20 @@ function validate(event) {
 		return false;
 	}
 
-	if (!userSelect.value) {
+	if (userSelect.value == "hide") {
+		userSelect.closest(".form-request__select").classList.add("error");
 		return false;
 	}
 
+	if (!userAgree.checked) {
+		userAgree.closest(".form-request__agree").classList.add("error");
+		return false;
+	} else {
+		userAgree.closest(".form-request__agree").classList.remove("error");
+	}
+
 	return true;
+
 }
 
 function isValidEmail (emailAddress) {

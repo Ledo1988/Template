@@ -81,4 +81,59 @@
       display: none;
     }
   }
+
+  &__error {
+    display: block;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: calc(100%/3*0.5);
+    padding: 12px;
+    border-radius: 3px;
+    width: calc(100%/3*2);
+    min-height: 36px;
+    font-size: 16px;
+    color: $color-white;
+    line-height: 1;
+    background-color: $color-error;
+    opacity: 0;
+    transition: $transition;
+    pointer-events: none;
+    z-index: -1;
+
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: calc((100% - 20px)/2);
+      @include triangle(top, 10px, 10px, $color-error);
+    }
+  }
+
+  &.error {
+
+    .select__title {
+      border-color: $color-error;
+      color: $color-error;
+
+      &::after {
+        border-color: $color-error transparent transparent transparent;
+      }
+    }
+
+    .select__error {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 3;
+    }
+  }
+
+  &.chosen {
+    .select__title {
+      border-color: $color-secondary;
+      color: $color-secondary;
+
+      &::after {
+        border-color: $color-secondary transparent transparent transparent;
+      }
+    }
+  }
 }

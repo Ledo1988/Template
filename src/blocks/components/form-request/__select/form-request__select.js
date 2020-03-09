@@ -38,6 +38,8 @@ $(document).ready(function() {
             $styledSelect.text($(this).text()).removeClass('active');
             $this.val($(this).attr('rel'));
             $list.hide();
+            $this.parents(".form-request__select").removeClass("error");
+            $this.parents(".form-request__select").addClass("chosen");
         });
 
         $(document).click(function() {
